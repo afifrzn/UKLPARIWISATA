@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Style.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 <body>
     </style>
@@ -16,15 +16,13 @@
         <h3 class="desc">You, Me and Us</h3>
         <nav id="navigation">
             <ul>
-                <li><a href="index.php?Page=Home">Home</a></li>
-                <li><a href="index.php?Page=About">About</a></li>
-                <li><a href="index.php?Page=Contact">Contact</a></li>
-                <li><a href="index.php?Page=Login">Login</a></li>
-                <li><a href="index.php?Page=Wisata">Wisata</a></li>
-                <li><a href="index.php?Page=Transportasi">Transportasi</a></li>
-                <li><a href="indexadmin.php?Page=Indexadmin">Admin</a></li>
-                <li><a href="index.php?Page=Register">Register</a></li>
-                <li><a href="index.php?Page=Login">Login</a></li>
+                <li><a href="indexadmin.php?Page=Home">Home</a></li>
+                <li><a href="indexadmin.php?Page=Wisata">Wisata</a></li>
+                <li><a href="indexadmin.php?Page=Transportasi">Transportasi</a></li>
+                <li><a href="indexadmin.php?Page=Add">Add</a></li>
+                <li><a href="indexadmin.php?Page=Delete">Delete</a></li>
+                <li><a href="indexadmin.php?Page=Update">Update</a></li>
+                <li><a href="indexadmin.php?Page=Tiket">Tiket</a></li>
             </ul>
         </nav>
     </header>
@@ -37,29 +35,23 @@
                 case 'Home':
                 include "Home.php";
                 break;
-                case 'About':
-                include "About.php";
-                break;
-                case 'Contact':
-                include "Contact.php";
-                break;          
-                case 'Log In':
-                include "Login.php";
-                break;
                 case 'Wisata';
                 include "Wisata.php";
                 break;
                 case 'Transportasi';
                 include "Transportasi.php";
                 break;
-                case 'Indexadmin';
-                include "indexadmin";
+                case 'Add';
+                include "Add.php";
                 break;
-                case 'Register';
-                include "Register.php";
+                case 'Delete';
+                include "Delete.php";
                 break;
-                case 'Login';
-                include "Login.php";
+                case 'Update';
+                include "Update.php";
+                break;
+                case 'Tiket';
+                include 'Tiket.php';
             }
         }
 else{

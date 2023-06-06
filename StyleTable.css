@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap');
-header h1.title,
+header h1.title {
+    color: paleturquoise;
+    font-family:'Montserrat', sans-serif;;
+}
 header h3.desc{
   text-align: center;
 }
@@ -11,20 +13,20 @@ a:link {
   color: red;
 }
 a:visited {
-  color: royalblue;
+  color: red;
 }
 a:hover {
   color: rebeccapurple;
 }
 a:active {
-  color: teal;
+  color: red;
 }
 #navigation {  
-  padding: 20px;
 }
 p {
   font-size: 110%;
   font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
   color: teal;
 }
 #contents {
@@ -33,14 +35,13 @@ p {
 ul {
   list-style-type: none;
   margin: 0;
-  padding: 10px;
+  padding: 0;
   overflow: hidden;
   background: #ABD9FF;
   font-family:'cursive';
 }
 li {
   float: left;
-  font-size: 20px;
 }
 li a {
   display: square;
@@ -56,10 +57,4 @@ footer {
   text-align: center;
   bottom: auto;
   position:fixed;
-}
-h3 {
-  color:RED;
-}
-th{
-  color: red;
 }
