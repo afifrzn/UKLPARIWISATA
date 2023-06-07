@@ -12,7 +12,7 @@
 		<p class="hint-text">Create your account</p>
         <div class="form-group">
 			<div class="row">
-				<div class="col"><input type="text" class="form-control" name="Username" placeholder="Username" required="required"></div>
+				<div class="col"><input type="text" id="Username" class="form-control" name="Username" placeholder="Username" required="required"></div>
 			</div>        	
         </div>
         <div class="form-group">

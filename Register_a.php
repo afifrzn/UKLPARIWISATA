@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['Register Now'])) {
+if(isset($_POST['save'])) {
     $Username = $_POST['Username'];
     $Email = $_POST['Email'];
     $Passw = $_POST['Passw'];

@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="Style.css" type="text/css">
 </head>
 <body>
     </style>
@@ -20,8 +20,10 @@
                 <li><a href="indexadmin.php?Page=Wisata">Wisata</a></li>
                 <li><a href="indexadmin.php?Page=Transportasi">Transportasi</a></li>
                 <li><a href="indexadmin.php?Page=Add">Add</a></li>
+                <li><a href="indexadmin.php?Page=AddWisata">AddWisata</a></li>
                 <li><a href="indexadmin.php?Page=Delete">Delete</a></li>
                 <li><a href="indexadmin.php?Page=Update">Update</a></li>
+                <li><a href="indexadmin.php?Page=UpdWisata">UpdWisata</a></li>
                 <li><a href="indexadmin.php?Page=Tiket">Tiket</a></li>
             </ul>
         </nav>
@@ -44,11 +46,17 @@
                 case 'Add';
                 include "Add.php";
                 break;
+                case 'AddWisata';
+                include "AddWisata.php";
+                break;
                 case 'Delete';
                 include "Delete.php";
                 break;
                 case 'Update';
                 include "Update.php";
+                break;
+                case 'UpdWisata';
+                include "UpdWisata.php";
                 break;
                 case 'Tiket';
                 include 'Tiket.php';
@@ -59,8 +67,9 @@ else{
         }
         ?>
     </div>
+    <image src="Kereta.png"/>
+</body>
     <footer>
         &copy La Tournee
     </footer>
-</body>
 </html>

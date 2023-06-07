@@ -32,7 +32,6 @@
         <td><?php echo $data['KodeTiket']; ?></td>
         <td><?php echo $data['NamaTransportasi'];?></td>
         <td><?php echo $data['Relasi'];?></td>
-        <td><?php echo $data['Kelas'];?></td>
         <td><?php echo $data['Keberangkatan'];?></td>
         <td><?php echo $data['Kedatangan'];?></td>
         <td><?php echo $data['Harga'];?></td>

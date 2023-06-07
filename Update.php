@@ -6,7 +6,7 @@ $result = mysqli_query($koneksi,"SELECT * FROM transportasi");
 <html>
  <head>
    <title> Update/Edit</title>
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="Style.css">
  </head>
 <body>
 <?php

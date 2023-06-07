@@ -1,105 +1,53 @@
-<!-- Add Product -->
-<div class="modal fade" id="addproduct" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <center>
-          <h4 class="modal-title" id="myModalLabel">Add New Product</h4>
-        </center>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-          <form method="POST" action="addproduct.php" enctype="multipart/form-data">
-            <div class="form-group" style="margin-top:10px;">
-              <div class="row">
-                <div class="col-md-3" style="margin-top:7px;">
-                  <label class="control-label">Product Name:</label>
-                </div>
-                <div class="col-md-9">
-                  <input type="text" class="form-control" name="pname" required>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="row">
-                <div class="col-md-3" style="margin-top:7px;">
-                  <label class="control-label">Category:</label>
-                </div>
-                <div class="col-md-9">
-                  <select class="form-control" name="category"> <?php $sql="select * from category order by categoryid asc"; $query=$conn->query($sql); while($row=$query->fetch_array()){ ?> <option value="
-                                                <?php echo $row['categoryid']; ?>"> <?php echo $row['catname']; ?> </option> <?php } ?> </select>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="row">
-                <div class="col-md-3" style="margin-top:7px;">
-                  <label class="control-label">Price:</label>
-                </div>
-                <div class="col-md-9">
-                  <input type="text" class="form-control" name="price" required>
-                </div>
-              </div>
-            </div>
-            <div class="form-group">
-              <div class="row">
-                <div class="col-md-3" style="margin-top:7px;">
-                  <label class="control-label">Photo:</label>
-                </div>
-                <div class="col-md-9">
-                  <input type="file" name="photo">
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">
-          <span class="glyphicon glyphicon-remove"></span> Close </button>
-        <button type="submit" class="btn btn-primary">
-          <span class="glyphicon glyphicon-floppy-disk"></span> Save </button>
+<HTML>
+    <head>
+    <h1>Add Data</h1>
+</head>
+
+<body>
+        <h3>Data Pelanggan</h3>
+        <form action="Add.php" method="post" name="form1">
+            <table width="25%" border="0">
+                <tr>
+                    <td>NamaTransportasi</td>
+                    <td><input type="text" name="NamaTransportasi"></td>
+                </tr>
+                <tr>
+                    <td>Kelas</td>
+                    <td><input type="text" name="Kelas"></td>
+                </tr>
+                <tr>
+                    <td>Relasi</td>
+                    <td><input type="text" name="Relasi"></td>
+                </tr>
+                <tr>
+                    <td>WaktuTempuh</td>
+                    <td><input type="text" name="WaktuTempuh"></td>
+                </tr>
+                <td>Harga</td>
+                <td><input type="text" name="Harga"></td>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="Submit" value="add"></td>
+                </tr>
+<?php
+
+if(isset($_POST['Submit'])) {
+    $NamaTransportasi = $_POST['NamaTransportasi'];
+    $Kelas = $_POST['Kelas'];
+    $Relasi = $_POST['Relasi'];
+    $WaktuTempuh = $_POST['WaktuTempuh'];
+    $Harga = $_POST['Harga'];
+    echo ($NamaTransportasi);
+    include_once("connect.php");
+    $sql="INSERT INTO transportasi(NamaTransportasi,Kelas,Relasi,WaktuTempuh,Harga) VALUES('$NamaTransportasi','$Kelas','$Relasi','$WaktuTempuh','$Harga')";
+    $result = mysqli_query($koneksi,$sql,);
+
+
+    header("location:Transportasi.php");
+
+}
+?>
+            </table>
         </form>
-      </div>
-    </div>
-    <!-- /.modal-content -->
-  </div>
-  <!-- /.modal-dialog -->
-</div>
-<!-- Add Category -->
-<div class="modal fade" id="addcategory" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <center>
-          <h4 class="modal-title" id="myModalLabel">Add New Category</h4>
-        </center>
-      </div>
-      <div class="modal-body">
-        <div class="container-fluid">
-          <form method="POST" action="addcategory.php" enctype="multipart/form-data">
-            <div class="form-group" style="margin-top:10px;">
-              <div class="row">
-                <div class="col-md-3" style="margin-top:7px;">
-                  <label class="control-label">Category Name:</label>
-                </div>
-                <div class="col-md-9">
-                  <input type="text" class="form-control" name="cname" required>
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">
-          <span class="glyphicon glyphicon-remove"></span> Close </button>
-        <button type="submit" class="btn btn-primary">
-          <span class="glyphicon glyphicon-floppy-disk"></span> Save </button>
-        </form>
-      </div>
-    </div>
-    <!-- /.modal-content -->
-  </div>
-  <!-- /.modal-dialog -->
-</div>
+    </body>
+</html> 

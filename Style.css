@@ -11,16 +11,16 @@ a:link {
   color: red;
 }
 a:visited {
-  color: royalblue;
+  color: red;
 }
 a:hover {
-  color: rebeccapurple;
+  color: red;
 }
 a:active {
-  color: teal;
+  color: red;
 }
 #navigation {  
-  padding: 20px;
+  padding: 15px;
 }
 p {
   font-size: 110%;
@@ -40,14 +40,15 @@ ul {
 }
 li {
   float: left;
-  font-size: 20px;
+  font-size: 19px;
 }
 li a {
   display: square;
-  color: cyan;
+  color: red;
   text-align: center;
   padding: 20px 16px;
   text-decoration: none;
+  font-size: 19px;
 }
 li a:hover {
   background-color: #fff;
@@ -62,4 +63,13 @@ h3 {
 }
 th{
   color: red;
+}
+a{
+  font-size: 15px;
+}
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }

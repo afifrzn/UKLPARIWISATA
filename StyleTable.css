@@ -16,7 +16,7 @@ a:visited {
   color: red;
 }
 a:hover {
-  color: rebeccapurple;
+  color: red;
 }
 a:active {
   color: red;
@@ -41,7 +41,8 @@ ul {
   font-family:'cursive';
 }
 li {
-  float: left;
+  float: right;
+  color: red;
 }
 li a {
   display: square;
