@@ -17,14 +17,11 @@
     
         <nav id="navigation">
             <ul>
-                <li><a href="indea.php?index=Home">Home</a></li>
-                <li><a href="indexa.php?Page=About">About</a></li>
-                <li><a href="indexa.php?Page=Contact">Contact</a></li>
-                <li><a href="indexa.php?Page=Login">Login</a></li>
-                <li><a href="indexa.php?Page=Wisata">Wisata</a></li>
-                <li><a href="indexa.php?Page=Transportasi">Transportasi</a></li>
-                <li><a href="indexa.php?Page=Register">Register</a></li>
-                <li><a href="indexa.php?Page=Login">Login</a></li>
+                <li><a href="index.php?index=Home">Home</a></li>
+                <li><a href="index.php?Page=About">About</a></li>
+                <li><a href="index.php?Page=Contact">Contact</a></li>
+                <li><a href="index.php?Page=Wisata">Wisata</a></li>
+                <li><a href="index.php?Page=Transportasi">Transportasi</a></li>
             </ul>
         </nav>
         <td>Cari Kereta</td>
@@ -60,20 +57,11 @@ if(isset($_GET['Submit'])) {
                 case 'Contact':
                 include "Contact.php";
                 break;          
-                case 'Log In':
-                include "Login.php";
-                break;
                 case 'Wisata';
                 include "Wisata.php";
                 break;
                 case 'Transportasi';
                 include "Transportasi.php";
-                break;
-                case 'Register';
-                include "Register.php";
-                break;
-                case 'Login';
-                include "Login.php";
             }
         }
 else{

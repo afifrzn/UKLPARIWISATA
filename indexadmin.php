@@ -67,7 +67,6 @@ else{
         }
         ?>
     </div>
-    <image src="Kereta.png"/>
 </body>
     <footer>
         &copy La Tournee
