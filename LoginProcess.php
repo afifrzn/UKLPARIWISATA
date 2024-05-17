@@ -12,7 +12,7 @@ if(isset($_POST['save']))
         $_SESSION["Username"]=$row['Username'];
         $_SESSION["Email"]=$row['Email'];
         $_SESSION["Passw"]=$row['Passw']; 
-        header("Location: index.php"); 
+        header("Location: User.php"); 
     }
     else
     {
